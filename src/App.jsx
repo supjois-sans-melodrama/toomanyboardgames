@@ -226,7 +226,7 @@ function SectionLabel({ icon: Icon, eyebrow, children }) {
         </span>
         <h2
           className="text-lg md:text-xl leading-snug"
-          style={{ color: PAPER, fontFamily: "'Fraunces', serif", fontWeight: 600 }}
+          style={{ color: PAPER, fontFamily: "'Outfit', sans-serif", fontWeight: 600 }}
         >
           {children}
         </h2>
@@ -243,7 +243,7 @@ function CustomScatterTooltip({ active, payload }) {
       className="px-3 py-2 rounded-sm text-xs max-w-[220px]"
       style={{ background: PAPER, color: INK, border: `1px solid ${INK}22` }}
     >
-      <div className="font-semibold mb-1" style={{ fontFamily: "'Fraunces', serif" }}>{g.name}</div>
+      <div className="font-semibold mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>{g.name}</div>
       <div>Year {g.year} · Weight {g.weight.toFixed(1)} · Rating {g.rating.toFixed(1)}</div>
       <div className="mt-1 opacity-70">{g.mechanics.slice(0, 3).join(", ")}</div>
     </div>
@@ -339,10 +339,10 @@ export default function BoardGameDashboard() {
   return (
     <div
       className="w-full min-h-screen"
-      style={{ background: FELT, fontFamily: "'Space Grotesk', 'Inter', sans-serif" }}
+      style={{ background: FELT, fontFamily: "'Outfit', sans-serif" }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
         .no-scrollbar::-webkit-scrollbar { display: none; }
       `}</style>
 
@@ -357,7 +357,7 @@ export default function BoardGameDashboard() {
           </div>
           <h1
             className="text-4xl md:text-5xl mb-4 leading-tight"
-            style={{ color: PAPER, fontFamily: "'Fraunces', serif", fontWeight: 600 }}
+            style={{ color: PAPER, fontFamily: "'Outfit', sans-serif", fontWeight: 600 }}
           >
             What actually predicts<br />a good board game?
           </h1>
@@ -588,7 +588,7 @@ export default function BoardGameDashboard() {
               <div>
                 {selectedGameData && (
                   <div className="mb-3 pb-3" style={{ borderBottom: `1px solid ${INK}15` }}>
-                    <div className="text-lg font-semibold" style={{ fontFamily: "'Fraunces', serif" }}>
+                    <div className="text-lg font-semibold" style={{ fontFamily: "'Outfit', sans-serif" }}>
                       {selectedGameData.name}
                     </div>
                     <div className="flex gap-4 text-xs mt-1 opacity-70">
@@ -663,7 +663,7 @@ export default function BoardGameDashboard() {
                 { label: "Year span", value: `${recentStats.minYear}–${recentStats.maxYear}` },
               ].map((s) => (
                 <div key={s.label} className="p-3 rounded-sm" style={{ background: FELT_LIGHT, border: `1px solid ${FELT_LINE}` }}>
-                  <div className="text-2xl font-semibold" style={{ color: PAPER, fontFamily: "'Fraunces', serif" }}>{s.value}</div>
+                  <div className="text-2xl font-semibold" style={{ color: PAPER, fontFamily: "'Outfit', sans-serif" }}>{s.value}</div>
                   <div className="text-[11px] mt-0.5 opacity-60" style={{ color: "#B8AE98" }}>{s.label}</div>
                 </div>
               ))}
@@ -879,7 +879,7 @@ export default function BoardGameDashboard() {
             <SectionLabel icon={BookOpen} eyebrow="Model selection">Why these algorithms — and not others</SectionLabel>
             <Panel className="p-5 space-y-4">
               <div>
-                <div className="text-sm font-semibold mb-1" style={{ fontFamily: "'Fraunces', serif" }}>
+                <div className="text-sm font-semibold mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>
                   Ridge regression, not plain linear regression or gradient boosting
                 </div>
                 <p className="text-xs leading-relaxed opacity-80">
@@ -897,7 +897,7 @@ export default function BoardGameDashboard() {
                 </p>
               </div>
               <div>
-                <div className="text-sm font-semibold mb-1" style={{ fontFamily: "'Fraunces', serif" }}>
+                <div className="text-sm font-semibold mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>
                   K-means, not DBSCAN or hierarchical clustering
                 </div>
                 <p className="text-xs leading-relaxed opacity-80">
@@ -913,7 +913,7 @@ export default function BoardGameDashboard() {
                 </p>
               </div>
               <div>
-                <div className="text-sm font-semibold mb-1" style={{ fontFamily: "'Fraunces', serif" }}>
+                <div className="text-sm font-semibold mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>
                   PCA for the 2D projection
                 </div>
                 <p className="text-xs leading-relaxed opacity-80">
